@@ -1,2 +1,3 @@
-# github-101-mini
-Learning GitHub
+## What I am practicing
+- GitHub basics
+- Commits, branches, PRs
