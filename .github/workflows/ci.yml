@@ -13,4 +13,5 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run demo step
-        run: echo "CI is running successfully!"
+        run: echo "CI ran on $(date)"
+
