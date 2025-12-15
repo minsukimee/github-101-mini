@@ -1,0 +1,34 @@
+GitHub Issues explanation
+1. Create Issue on GitHub
+ - Go to Issues tab
+ - New Issue
+ - Set Title
+ - Add Description
+ - Create issue
+ - Make sure to note the issue number
+2. Create a branch from an issue
+ - Back in terminal
+  - git switch mian
+  - git pull
+  - git switch -c 'branch name should be issue-<number>-short-description
+ - Work on the Issue
+ - Add and commit the work
+ - Push the work
+3. Open a PR linked to the issue
+ - Write Closes #(number) on GitHub PR
+*What Closes #(number) does?
+ - Issue #(number) is automatically closed by creating a permanent link 
+   - Issue -> PR -> Commits
+4. Merge + cleanup
+ - GitHub closes the issue automatically
+ - Delete the branch on GitHub and back to the terminal 
+5. Local cleanup
+ - git switch main
+ - git pull
+ - git fetch --prune
+ - git branch -d (branchname)
+6. Why this matters professionally
+ - Structured Issues
+ - Clear PRs
+ - Linked Work
+ - Clean History
