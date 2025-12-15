@@ -10,3 +10,6 @@ Initial version
 ## PR Lifecycle Practice
 Initial version.
 Updated after review feedback.
+## GitHub Issues
+GitHub Issues are used to track tasks, bugs, and feature requests.
+They help organize work and connect discussions to code changes.
