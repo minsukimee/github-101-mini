@@ -1,0 +1,196 @@
+Git & GitHub One-Page Cheat Sheet
+🔹 DAILY WORKFLOW (MOST IMPORTANT)
+Start your day
+git switch main
+git pull
+
+
+→ Get the latest official code
+
+Start a task
+git switch -c feature/my-task
+
+
+→ One task = one branch
+
+Work & save progress
+git status
+git add filename        # or git add .
+git commit -m "Clear message"
+
+
+→ One idea = one commit
+
+Backup / share work
+git push -u origin feature/my-task   # first push only
+git push                             # after
+
+Open Pull Request (on GitHub)
+
+Explain what you did
+
+Let CI run
+
+Fix review comments
+
+Push again (same branch)
+
+Merge (usually squash)
+
+Squash & merge PR
+
+Delete branch on GitHub
+
+Cleanup after merge
+git switch main
+git pull
+git fetch --prune
+git branch -d feature/my-task
+
+🔹 BRANCHING RULES
+
+Branch = workspace
+
+Main = protected
+
+One branch per task
+
+Push many times, not many branches
+
+Delete branch after merge
+
+🔹 PUSH COMMANDS (MEMORIZE)
+First push of a new branch
+git push -u origin branch-name
+
+Every push after
+git push
+
+🔹 PULL REQUEST (PR) FLOW
+
+Create branch
+
+Commit locally
+
+Push branch
+
+Open PR
+
+Review comments
+
+Push fixes (same branch)
+
+CI passes
+
+Merge
+
+Delete branch
+
+🔹 MERGE STRATEGIES (WITH ANALOGY)
+Merge Commit
+
+Analogy: Stapling all drafts together
+
+Keeps all commits
+
+Adds “merge” commit
+
+Safe but messy history
+
+Squash & Merge ⭐ (RECOMMENDED)
+
+Analogy: Submitting only the final report
+
+All PR commits → 1 commit on main
+
+Clean history
+
+Most common in industry
+
+Rebase & Merge
+
+Analogy: Rewriting drafts as if perfect
+
+Clean & linear
+
+Rewrites history
+
+Advanced teams only
+
+🔹 GITHUB ACTIONS (CI) — SIMPLE MODEL
+
+.yml file = instruction sheet
+
+GitHub = automation robot
+
+Push / PR = trigger
+
+Runner = temporary Linux machine
+
+run: commands decide pass/fail
+
+CI truth:
+
+If any command fails → CI fails
+
+🔹 SAFE UNDO / RECOVERY (NO PANIC)
+Undo file changes
+git restore filename
+
+Unstage file
+git restore --staged filename
+
+Fix last commit message
+git commit --amend
+
+Undo last commit, keep changes
+git reset --soft HEAD~1
+
+Emergency recovery (black box)
+git reflog
+
+🔹 FETCH vs PULL
+git fetch        # check updates safely
+git pull         # fetch + apply
+
+
+Use fetch when unsure.
+
+🔹 CLEANUP COMMANDS
+git fetch --prune        # remove deleted remote branches
+git branch --merged      # see safe-to-delete branches
+git branch -d branch     # delete local branch
+
+🔹 GOLDEN RULES (REMEMBER THESE)
+
+One task = one branch
+
+One idea = one commit
+
+PR follows a branch, not a commit
+
+Same branch → many pushes
+
+CI protects main
+
+Squash keeps history clean
+
+If not pushed → always recoverable
+
+🔹 WHAT RECRUITERS LOOK FOR
+
+Clean README
+
+Branch + PR usage
+
+CI checks passing
+
+Squash merges
+
+Clear commit messages
+
+🧠 FINAL MENTAL MODEL
+
+Git = version control
+GitHub = collaboration + automation
+CI = robot quality checker
